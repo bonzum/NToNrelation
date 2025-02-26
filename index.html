@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to the LINUX School Application</h2>
+<p>This application allows you to manage students, courses, and enrollments.</p>
+
+<h3>Quick Links</h3>
+<ul>
+    <li><a href="{{ url_for('students') }}">View Students</a></li>
+    <li><a href="{{ url_for('courses') }}">View Courses</a></li>
+    <li><a href="{{ url_for('enroll') }}">Enroll Students in Courses</a></li>
+    <li><a href="{{ url_for('view_enrollments') }}">View Enrollments</a></li>
+</ul>
+{% endblock %}

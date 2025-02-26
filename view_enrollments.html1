@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Enrollments</h2>
+<h3>Students and Their Courses</h3>
+<ul>
+    {% for student in students %}
+    <li>
+        {{ student.name }}
+        <ul>
+            {% for course in student.courses %}
+            <li>{{ course.name }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Courses and Their Students</h3>
+<ul>
+    {% for course in courses %}
+    <li>
+        {{ course.name }}
+        <ul>
+            {% for student in course.students %}
+            <li>{{ student.name }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
